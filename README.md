@@ -64,8 +64,9 @@ it('My Test', () => {
 var objectUnderTest = {
   code: 100;
   testFunction: function(){
+  var self = this;
     return new Promise(function(resolve, reject){
-      throw new Error('Something went wrong for code: '+this.code);
+      throw new Error('Something went wrong for code: '+self.code);
     })
   }
 }
