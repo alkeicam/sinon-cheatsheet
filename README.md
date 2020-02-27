@@ -5,7 +5,7 @@ Most used sinon operations
   * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
   * [Expect function to throw error (function using this)](#expect-function-to-throw-error-function-using-this)
 * [Promises](#promises)
-  * [Expect function to throw (reject) with error](#expect-function-to-throw-reject-with-error)
+  * [Expect function(promise) to throw (reject) with error](#expect-function-to-throw-reject-with-error)
 
 ## Setup
 ```javascript
@@ -58,7 +58,7 @@ it('My Test', () => {
 ```
 
 ## PROMISES
-### Expect function to throw (reject) with error
+### Expect function(promise) to throw (reject) with error
 ```javascript
 
 var objectUnderTest = {
