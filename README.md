@@ -1,8 +1,11 @@
 # sinon-cheatsheet
 Most used sinon operations
 * [Setup](#setup)
-* [NORMAL FUNCTIONS](#NORMALFUNCTIONS)
-  * [Expect function to throw error (function not using this)](#Expectfunctiontothrowerrorfunctionnotusingthis)
+* [NORMAL FUNCTIONS](#normal-functions)
+  * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
+  * [Expect function to throw error (function using this)](#expect-function-to-throw-error-function-using-this)
+* [Promises](#promises)
+  * [Expect function to throw (reject) with error](#expect-function-to-throw-reject-with-error)
 
 ## Setup
 ```javascript
