@@ -1,5 +1,8 @@
 # sinon-cheatsheet
 Most used sinon operations
+* [Setup](#setup)
+* [NORMAL FUNCTIONS](#NORMALFUNCTIONS)
+  * [Expect function to throw error (function not using this)](#Expectfunctiontothrowerrorfunctionnotusingthis)
 
 ## Setup
 ```javascript
@@ -16,7 +19,7 @@ const sinon = require('sinon');
 ```
 
 ## NORMAL FUNCTIONS
-### Expect function to throw error (function not using this).
+### Expect function to throw error (function not using this)
 ```javascript
 
 var objectUnderTest = {
@@ -33,7 +36,7 @@ it('My Test', () => {
 
 ```
 
-### Expect function to throw error (function using this).
+### Expect function to throw error (function using this)
 ```javascript
 
 var objectUnderTest = {
