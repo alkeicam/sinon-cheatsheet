@@ -1,7 +1,7 @@
 # sinon-cheatsheet
 Most used sinon operations
 * [Setup](#setup)
-* [NORMAL FUNCTIONS](#normal-functions)
+* [Normal functions](#normal-functions)
   * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
   * [Expect function to throw error (function using this)](#expect-function-to-throw-error-function-using-this)
 * [Promises](#promises)
@@ -49,7 +49,7 @@ var objectUnderTest = {
   }
 }
 
-// now going to test, now this will be set accordingly so the code will behave as expected
+// now going to test, notice using bind() - as a result *this* inside function will be set accordingly so the code will behave as expected
 
 it('My Test', () => {     
   return expect(objectUnderTest.testFunction.bind(objectUnderTest)).to.throw('Something went wrong for code: '+objectUnderTest.code);                      
