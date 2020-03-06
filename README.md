@@ -2,7 +2,7 @@
 Most used sinon operations
 * [Setup](#setup)
 * [MOCKING BEHAVIOUR](#mocking-behaviour)
-  * [FUNCTIONS RETURNING PROMISES](#functions-returning-promises)
+  * [Functions returning promises](#functions-returning-promises)
     * [Mock resolving with value](#mock-resolving-with-value)  
     * [Mock rejecting with exception](#mock-rejecting-with-exception)      
 * [CHECKING BEHAVIOUR](#checking-behaviour)
@@ -26,7 +26,7 @@ const expect = chai.expect;
 const sinon = require('sinon');
 ```
 ## MOCKING BEHAVIOUR
-### FUNCTIONS RETURNING PROMISES
+### Functions returning promises
 #### Mock resolving with value
 ```javascript
 var myMockedResult = {};
@@ -43,7 +43,7 @@ s1.rejects('User error');
 ```
 
 ## CHECKING BEHAVIOUR
-### NORMAL FUNCTIONS
+### Normal functions
 #### Expect function to throw error (function not using this)
 ```javascript
 
