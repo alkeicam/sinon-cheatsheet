@@ -1,11 +1,16 @@
 # sinon-cheatsheet
 Most used sinon operations
 * [Setup](#setup)
-* [Normal functions](#normal-functions)
-  * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
-  * [Expect function to throw error (function using this)](#expect-function-to-throw-error-function-using-this)
-* [Promises](#promises)
-  * [Expect function(promise) to throw (reject) with error](#expect-function-to-throw-reject-with-error)
+* [MOCKING BEHAVIOUR](#mocking-behaviour)
+  * [FUNCTIONS RETURNING PROMISES](#functions-returning-promises)
+    * [Mock resolving with value](#mock-resolving-with-value)  
+    * [Mock rejecting with exception](#mock-rejecting-with-exception)      
+* [CHECKING BEHAVIOUR](#checking-behaviour)
+  * [Normal functions](#normal-functions)
+    * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
+    * [Expect function to throw error (function using this)](#expect-function-to-throw-error-function-using-this)
+  * [Promises](#promises)
+    * [Expect function(promise) to throw (reject) with error](#expect-function-to-throw-reject-with-error)
 
 ## Setup
 ```javascript
@@ -29,6 +34,14 @@ var myMockedResult = {};
 var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
 s1.resolves(myMockedResult);
 ```
+#### Mock rejecting with exception
+```javascript
+var myMockedResult = {};
+
+var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
+s1.rejects('User error');
+```
+
 ## CHECKING BEHAVIOUR
 ### NORMAL FUNCTIONS
 #### Expect function to throw error (function not using this)
