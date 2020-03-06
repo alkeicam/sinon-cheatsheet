@@ -20,9 +20,18 @@ const expect = chai.expect;
 // Sinon is a library used for mocking or verifying function calls in JavaScript.
 const sinon = require('sinon');
 ```
+## MOCKING BEHAVIOUR
+### FUNCTIONS RETURNING PROMISES
+#### Mock resolving with value
+```javascript
+var myMockedResult = {};
 
-## NORMAL FUNCTIONS
-### Expect function to throw error (function not using this)
+var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
+s1.resolves(myMockedResult);
+```
+## CHECKING BEHAVIOUR
+### NORMAL FUNCTIONS
+#### Expect function to throw error (function not using this)
 ```javascript
 
 var objectUnderTest = {
@@ -39,7 +48,7 @@ it('My Test', () => {
 
 ```
 
-### Expect function to throw error (function using this)
+#### Expect function to throw error (function using this)
 ```javascript
 
 var objectUnderTest = {
@@ -57,8 +66,8 @@ it('My Test', () => {
 
 ```
 
-## PROMISES
-### Expect function(promise) to throw (reject) with error
+### PROMISES
+#### Expect function(promise) to throw (reject) with error
 ```javascript
 
 var objectUnderTest = {
