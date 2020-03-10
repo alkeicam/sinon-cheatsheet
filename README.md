@@ -4,7 +4,8 @@ Most used sinon operations
 * [MOCKING BEHAVIOUR](#mocking-behaviour)
   * [Functions returning promises](#functions-returning-promises)
     * [Mock resolving with value](#mock-resolving-with-value)  
-    * [Mock rejecting with exception](#mock-rejecting-with-exception)      
+    * [Mock rejecting with exception](#mock-rejecting-with-exception)  
+    * [Mock returning different data on different calls](#mock-returning-different-data-on-different-calls)"
 * [CHECKING BEHAVIOUR](#checking-behaviour)
   * [Normal functions](#normal-functions)
     * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
@@ -41,6 +42,16 @@ var myMockedResult = {};
 var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
 s1.rejects('User error');
 ```
+#### Mock returning different data on different calls
+```javascript
+var myMockedResult1 = {};
+var myMockedResult2 = {};
+
+var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
+s1.onCall(0).resolves(myMockedResult1);
+s1.onCall(1).resolves(myMockedResult2);
+```
+onCall(0).returns(1)
 
 ## CHECKING BEHAVIOUR
 ### Normal functions
