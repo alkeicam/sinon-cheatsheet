@@ -51,7 +51,7 @@ var s1 = sinon.stub(myObject,'myFunctionThatReturnsPromise');
 s1.onCall(0).resolves(myMockedResult1);
 s1.onCall(1).resolves(myMockedResult2);
 ```
-onCall(0).returns(1)
+
 
 ## CHECKING BEHAVIOUR
 ### Normal functions
