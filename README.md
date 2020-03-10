@@ -5,7 +5,7 @@ Most used sinon operations
   * [Functions returning promises](#functions-returning-promises)
     * [Mock resolving with value](#mock-resolving-with-value)  
     * [Mock rejecting with exception](#mock-rejecting-with-exception)  
-    * [Mock returning different data on different calls](#mock-returning-different-data-on-different-calls)"
+    * [Mock returning different data on different calls](#mock-returning-different-data-on-different-calls)
 * [CHECKING BEHAVIOUR](#checking-behaviour)
   * [Normal functions](#normal-functions)
     * [Expect function to throw error (function not using this)](#expect-function-to-throw-error-function-not-using-this)
