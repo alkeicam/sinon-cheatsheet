@@ -107,6 +107,23 @@ it('My Test', () => {
 })
 
 ```
+#### Expect function to throw error (function with arguments and using this)
+```javascript
+
+var objectUnderTest = {
+  testFunction: function(x){
+    throw new Error('Something went wrong with'+x);
+  }
+}
+
+// now going to test
+var param = 7;
+
+it('My Test', () => {     
+  return expect(()=>{objectUnderTest.testFunction(param).bind(objectUnderTest)}).to.throw('Something went wrong');                      
+})
+
+```
 
 ### PROMISES
 #### Expect function(promise) to throw (reject) with error
