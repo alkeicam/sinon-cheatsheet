@@ -120,7 +120,7 @@ var objectUnderTest = {
 var param = 7;
 
 it('My Test', () => {     
-  return expect(()=>{objectUnderTest.testFunction(param).bind(objectUnderTest)}).to.throw('Something went wrong');                      
+  return expect(()=>{objectUnderTest.testFunction.bind(objectUnderTest)(param)}).to.throw('Something went wrong');                      
 })
 
 ```
